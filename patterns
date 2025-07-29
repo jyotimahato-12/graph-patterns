@@ -1,0 +1,42 @@
+out of this nothing  will come
+
+
+
+📁 UNDIRECTED GRAPH PATTERNS
+
+
+
+| Pattern                             | Purpose                                                                  |
+| ----------------------------------- | ------------------------------------------------------------------------ |
+| 🔹 Connected Components        | Identify distinct groups of connected nodes (e.g., islands, subnetworks) |
+| 🔹 Cycle Detection (Undirected) | Check for cycles using DFS or Union-Find                                 |
+| 🔹 Union-Find (DSU)          | Efficiently manage dynamic connectivity of components                    |
+| 🔹 Minimum Spanning Tree (MST)  | Connect all nodes at minimal total cost (Prim’s or Kruskal’s algorithm)  |
+| 🔹 Bridge Finding (Tarjan)   | Find edges that, if removed, increase the number of components           |
+
+
+
+📁 DIRECTED GRAPH PATTERNS
+
+
+| Pattern                                    | Purpose                                                              |
+| ------------------------------------------ | -------------------------------------------------------------------- |
+| 🔸 **Topological Sort**                    | Linear ordering of nodes respecting direction (DAG only)             |
+| 🔸 **Cycle Detection (Directed)**          | Detect cycles using recursion stack or indegree (Kahn’s algo)        |
+| 🔸 **Strongly Connected Components (SCC)** | Identify cycles or closed subgraphs (Kosaraju or Tarjan’s algorithm) |
+| 🔸 **DAG Shortest Path**                   | Find shortest/longest path in DAG using topological order            |
+| 🔸 **Bellman-Ford Algorithm**              | Single-source shortest paths with support for negative weights       |
+
+
+📁 COMMON TO BOTH (DIRECTED & UNDIRECTED)
+
+| Pattern                          | Purpose                                                         |
+| -------------------------------- | --------------------------------------------------------------- |
+| ✅ **Breadth-First Search (BFS)** | Level-order traversal, unweighted shortest paths                |
+| ✅ **Depth-First Search (DFS)**   | Deep exploration, useful for pathfinding, cycles, components    |
+| ✅ **Dijkstra’s Algorithm**       | Shortest path with non-negative edge weights                    |
+| ✅ **Floyd-Warshall Algorithm**   | All-pairs shortest paths (handles negative weights, not cycles) |
+| ✅ **0-1 BFS**                    | Optimized BFS for edge weights of 0 or 1 using deque            |
+| ✅ **Bidirectional BFS**          | BFS from both source and target for faster search               |
+| ✅ **Multi-Source BFS**           | Run BFS from multiple sources at once (e.g., fire/virus spread) |
+| ✅ **Backtracking on Graphs**     | Explore all paths recursively, used for constraints/paths       |
