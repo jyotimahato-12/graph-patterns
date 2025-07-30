@@ -1,0 +1,8 @@
+int kruskal(int n, vector<tuple<int,int,int>>& edges) {
+    sort(edges.begin(), edges.end()); // sort by weight
+    DSU dsu(n);
+    int cost = 0;
+    for (auto& [w, u, v] : edges)
+        if (dsu.unite(u, v)) cost += w;
+    return cost;
+}
