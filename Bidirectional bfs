@@ -1,0 +1,22 @@
+bool bidirectionalBFS(int src, int tgt, vector<vector<int>>& adj) {
+    queue<int> q1, q2;
+    unordered_set<int> vis1, vis2;
+    q1.push(src); vis1.insert(src);
+    q2.push(tgt); vis2.insert(tgt);
+
+    while (!q1.empty() && !q2.empty()) {
+        auto expand = [](queue<int>& q, unordered_set<int>& vis, unordered_set<int>& other, vector<vector<int>>& adj) {
+            int u = q.front(); q.pop();
+            for (int v : adj[u]) {
+                if (other.count(v)) return true;
+                if (!vis.count(v)) {
+                    vis.insert(v);
+                    q.push(v);
+                }
+            }
+            return false;
+        };
+        if (expand(q1, vis1, vis2, adj) || expand(q2, vis2, vis1, adj)) return true;
+    }
+    return false;
+}
