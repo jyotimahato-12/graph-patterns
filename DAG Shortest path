@@ -1,0 +1,12 @@
+vector<int> shortestPathDAG(int n, vector<vector<pair<int,int>>>& adj) {
+    vector<int> topo = topoSort(n, adj); // reuse topoSort
+    vector<int> dist(n, INT_MAX); dist[0] = 0;
+
+    for (int u : topo) {
+        if (dist[u] == INT_MAX) continue;
+        for (auto [v, w] : adj[u])
+            if (dist[u] + w < dist[v])
+                dist[v] = dist[u] + w;
+    }
+    return dist;
+}
