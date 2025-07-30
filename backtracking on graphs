@@ -1,0 +1,12 @@
+void backtrack(int u, vector<vector<int>>& adj, vector<bool>& vis, vector<int>& path) {
+    if (/* goal */) { /* process path */ return; }
+    for (int v : adj[u]) {
+        if (!vis[v]) {
+            vis[v] = true;
+            path.push_back(v);
+            backtrack(v, adj, vis, path);
+            path.pop_back();
+            vis[v] = false;
+        }
+    }
+}
