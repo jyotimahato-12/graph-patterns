@@ -1,0 +1,13 @@
+void dfs1(int u, vector<vector<int>>& g, vector<bool>& vis, stack<int>& st) {
+    vis[u] = true;
+    for (int v : g[u])
+        if (!vis[v]) dfs1(v, g, vis, st);
+    st.push(u);
+}
+
+void dfs2(int u, vector<vector<int>>& rg, vector<bool>& vis, vector<int>& comp) {
+    vis[u] = true;
+    comp.push_back(u);
+    for (int v : rg[u])
+        if (!vis[v]) dfs2(v, rg, vis, comp);
+}
