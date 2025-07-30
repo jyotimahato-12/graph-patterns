@@ -1,0 +1,6 @@
+void dfs(int u, vector<vector<int>>& adj, vector<bool>& vis, stack<int>& st) {
+    vis[u] = true;
+    for (int v : adj[u])
+        if (!vis[v]) dfs(v, adj, vis, st);
+    st.push(u); // postorder
+}
