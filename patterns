@@ -51,3 +51,33 @@ IF U MASTER THE PATTERN,U WILL SOLVE 80% OF ANY INTERVIEW PROBLEM MUCH FASTER
 | ✅ **Bidirectional BFS**          | BFS from both source and target for faster search               |
 | ✅ **Multi-Source BFS**           | Run BFS from multiple sources at once (e.g., fire/virus spread) |
 | ✅ **Backtracking on Graphs**     | Explore all paths recursively, used for constraints/paths       |
+
+
+
+
+
+
+| Pattern                          | Time Complexity               |
+| -------------------------------- | ----------------------------- |
+| Connected Components (DFS/BFS)   | `O(V + E)`                    |
+| Cycle Detection (Undirected)     | `O(V + E)` or `O(α(N))` (DSU) |
+| Union-Find (DSU with path comp.) | `O(α(N))` per operation       |
+| Minimum Spanning Tree (Kruskal)  | `O(E log V)`                  |
+| Minimum Spanning Tree (Prim)     | `O(V²)` or `O((V + E) log V)` |
+| Bridge Finding (Tarjan)          | `O(V + E)`                    |
+| Topological Sort                 | `O(V + E)`                    |
+| Cycle Detection (Directed)       | `O(V + E)`                    |
+| SCC (Kosaraju/Tarjan)            | `O(V + E)`                    |
+| DAG Shortest Path                | `O(V + E)`                    |
+| Bellman-Ford Algorithm           | `O(V × E)`                    |
+| Breadth-First Search (BFS)       | `O(V + E)`                    |
+| Depth-First Search (DFS)         | `O(V + E)`                    |
+| Dijkstra’s Algorithm             | `O((V + E) log V)`            |
+| Floyd-Warshall Algorithm         | `O(V³)`                       |
+| 0-1 BFS                          | `O(V + E)`                    |
+| Bidirectional BFS                | `O(b^(d/2))` approx           |
+| Multi-Source BFS                 | `O(V + E)`                    |
+| Backtracking on Graphs           | `Exponential`                 |
+
+
+
